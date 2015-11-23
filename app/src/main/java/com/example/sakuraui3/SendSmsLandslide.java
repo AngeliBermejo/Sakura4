@@ -9,18 +9,16 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RadioButton;
 import android.widget.Toast;
 
-public class SendSms extends Activity {
+public class SendSmsLandslide extends Activity {
     Button sendBtn;
     EditText txtphoneNo;
     EditText txtMessage;
-    RadioButton radioFlood;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.sendsms);
+        setContentView(R.layout.sendsmslandslide);
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
 
@@ -29,13 +27,12 @@ public class SendSms extends Activity {
 
         getWindow().setLayout((int) (width * 0.9), (int) (height * 0.6));
 
-        radioFlood = (RadioButton)findViewById(R.id.radioFlood);
-        sendBtn = (Button) findViewById(R.id.btnSendSMS);
-        txtphoneNo = (EditText) findViewById(R.id.editText);
-        txtMessage = (EditText) findViewById(R.id.editText2);
+        sendBtn = (Button) findViewById(R.id.btnLandslide);
+        txtphoneNo = (EditText) findViewById(R.id.editLandslide1);
+        txtMessage = (EditText) findViewById(R.id.editLandslide2);
         String cellphone = "09177926032;09157518432"; //cellphone numbers
-       txtphoneNo.setText(cellphone);
-        txtMessage.setText("There is flood at");
+        txtphoneNo.setText(cellphone);
+        txtMessage.setText("There is landslide at");
 
         sendBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
